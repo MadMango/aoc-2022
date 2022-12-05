@@ -15,12 +15,10 @@ const containedFully = pairs.filter((pair) => {
   const [leftMin, leftMax] = left.split("-").map(Number);
   const [rightMin, rightMax] = right.split("-").map(Number);
 
-  const leftMinFits =
-    isBetween(leftMin, rightMin, rightMax) && leftMin >= rightMin;
+  const leftMinFits = isBetween(leftMin, rightMin, rightMax);
   const leftMaxFits = isBetween(leftMax, rightMin, rightMax);
 
-  const rightMinFits =
-    isBetween(rightMin, rightMin, rightMax) && rightMin >= leftMin;
+  const rightMinFits = isBetween(rightMin, leftMin, leftMax);
   const rightMaxFits = isBetween(rightMax, leftMin, leftMax);
 
   const leftFits = leftMinFits && leftMaxFits;
