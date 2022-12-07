@@ -68,7 +68,6 @@ func main() {
 	sizesUnder10k := 0
 	for _, value := range directoriesSizes {
 		if value <= 100000 {
-			// fmt.Println("directory %v, size %v\n", "dir", value)
 			sizesUnder10k += value
 		}
 	}
@@ -87,7 +86,6 @@ func main() {
 
 	for _, value := range directoriesSizes {
 		if value >= toFreeUp && value < smallestThatFits {
-			// fmt.Println("directory %v, size %v\n", "dir", value)
 			smallestThatFits = value
 		}
 	}
